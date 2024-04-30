@@ -2,9 +2,7 @@ package Level2;
 
 public class Calculator {
     public Calculator() {}; // 생성자
-    double result=0;
-
-    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
+    double result=0;    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
     double operationResult;
 
     public Double calculate(int num1, int num2, char operationSymbol) throws Exception {
