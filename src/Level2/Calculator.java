@@ -55,15 +55,24 @@ public class Calculator {
     }
 
 
-    /* static, final 활용 */
-    /* 원의 넓이 결과를 저장하는 컬렉션 타입의 필드 선언 및 생성 */
-    /* 생성자 수정 */
+    private List<Double> circleAreaList = new ArrayList<Double>();  /* 원의 넓이 결과를 저장하는 컬렉션 타입의 필드 선언 및 생성 */
     static final double pi = Math.PI;
 
-    /* 원의 넓이를 구하는 메서드 선언*/
-    public double calculateCircleArea(매배변수) {
-        /* 원의 넓이 계산 구현 */
+    public double calculateCircleArea(double radius) {   /* 원의 넓이를 구하는 메서드 선언*/
+        return pi*radius*radius;
     }
-    /* 원의 넓이 저장 필드 Getter, Setter, 조회 메서드 구현 */
+
+    public double getCircleArea(int index) {       //getter
+        return circleAreaList.get(index);
+    }
+
+    public void setCircleArea(double circleArea) {      //setter
+        circleAreaList.add(calculateCircleArea(circleArea));
+    }
+
+    public void inquiryCircleArea() {  /* 연산 결과들을 조회 */
+        for (double j :circleAreaList)
+            System.out.println(j);
+    }
 
 }
