@@ -20,7 +20,7 @@ public class App {
                 System.out.print("두 번째 숫자를 입력하세요:");
                 int num2 = sc.nextInt();
 
-                System.out.print("사칙연산 또는 나머지연산 기호를 입력하세요:      ex) +, -, *, /, %");
+                System.out.print("사칙연산 또는 나머지연산 기호를 입력하세요:  ex) +, -, *, /, %  ");
                 char operator = sc.next().charAt(0);
 
                 try {       // 숫자 2개와 연산기호 넣고 계산
@@ -31,9 +31,11 @@ public class App {
                 }
 
                 System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+                sc.nextLine();
                 if (sc.nextLine().equals("remove")) arithmeticCalculator.removeResult();
 
                 System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+                sc.nextLine();
                 if (sc.nextLine().equals("inquiry")) arithmeticCalculator.inquiryResults();
             } else if (checkKind == 2) {
                 System.out.println("반지름을 입력해주세요.");
@@ -49,6 +51,7 @@ public class App {
             }
             else System.out.println("입력값이 올바르지 않습니다.");
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+            sc.nextLine();  // 씹혀서 .. 한 번 더 받아준다...
         } while(! sc.nextLine().equals("exit"));
 
     }
