@@ -3,29 +3,33 @@ package Level2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArithmeticCalculator {
+public class ArithmeticCalculator extends Calculator {
     double result = 0;    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
+//    private AddOperator addOperator;
 
     private List<Double> resultList;  /* 연산 결과를 저장하는 컬렉션 타입 필드를 외부에서 직접 접근 하지 못하도록 수정*/
 
     public ArithmeticCalculator() {
+//      addOperator = new AddOperator();
         resultList = new ArrayList<Double>();
     }
 
     public double calculate(int num1, int num2, char operationSymbol) throws Exception {
+
         switch (operationSymbol) {
             case '+':
-                AddOperator addOperator = new AddOperator();
+                //   AddOperator addOperator = new AddOperator();
+
                 result = addOperator.operate(num1, num2);
                 break;
 
             case '-':
-                SubtractOperator subtractOperator = new SubtractOperator();
+ //               SubtractOperator subtractOperator = new SubtractOperator();
                 result = subtractOperator.operate(num1, num2);
                 break;
 
             case '*':
-                MultiplyOperator multiplyOperator = new MultiplyOperator();
+    //            MultiplyOperator multiplyOperator = new MultiplyOperator();
                 result = multiplyOperator.operate(num1, num2);
                 break;
 
@@ -34,12 +38,12 @@ public class ArithmeticCalculator {
                     Exception e = new Exception("분모가 0입니다.");
                     throw e;
                 }
-                DivideOperator divideOperator = new DivideOperator();
+  //              DivideOperator divideOperator = new DivideOperator();
                 result = divideOperator.operate(num1,num2);
                 break;
 
             case '%':
-                ModOperator modOperator = new ModOperator();
+   //             ModOperator modOperator = new ModOperator();
                 result = modOperator.operate(num1, num2);
                 break;
         }
