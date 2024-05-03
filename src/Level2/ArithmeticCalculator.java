@@ -9,7 +9,7 @@ public class ArithmeticCalculator {
     private List<Double> resultList;  /* 연산 결과를 저장하는 컬렉션 타입 필드를 외부에서 직접 접근 하지 못하도록 수정*/
 
     public ArithmeticCalculator() {
-        new ArrayList<Double>();
+        resultList = new ArrayList<Double>();
     }
 
     public double calculate(int num1, int num2, char operationSymbol) throws Exception {
@@ -59,7 +59,7 @@ public class ArithmeticCalculator {
     }
 
     public void inquiryResults() {  /* 연산 결과들을 조회 */
-        for (double k:resultList)
+        for (double k: this.resultList)
             System.out.println(k);
     }
 }

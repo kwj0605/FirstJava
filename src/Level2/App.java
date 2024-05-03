@@ -36,6 +36,7 @@ public class App {
 
                 System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
                 sc.nextLine();
+
                 if (sc.nextLine().equals("inquiry")) arithmeticCalculator.inquiryResults();
             } else if (checkKind == 2) {
                 System.out.println("반지름을 입력해주세요.");
@@ -51,7 +52,7 @@ public class App {
             }
             else System.out.println("입력값이 올바르지 않습니다.");
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            sc.nextLine();  // 씹혀서 .. 한 번 더 받아준다...
+//            sc.nextLine();  // 씹혀서 .. 한 번 더 받아준다...
         } while(! sc.nextLine().equals("exit"));
 
     }
